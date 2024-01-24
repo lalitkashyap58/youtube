@@ -11,6 +11,7 @@ const Head = () => {
   const [suggestions, setSuggestions] = useState([]);
   const [showSuggestions, setShowSuggestions] = useState(false);
   const searchCache=useSelector((store)=>store.search);
+  console.log(process.env.YOUTUBE_API_KEY);
 
 
   useEffect(() => {
@@ -43,11 +44,11 @@ getSearchSuggestions();
   };
 
   return (
-    <div className="grid grid-flow-col p-2 shadow-lg bg-slate-300 sticky top-0 z-50">
+    <div className="grid grid-flow-col p-2 shadow-lg bg-slate-300 sticky top-0 z-10">
       <div className="flex col-span-1">
         <img
           onClick={() => toggleMenuHandler()}
-          className="hamburger h-8 cursor-pointer"
+          className="hamburger h-8 cursor-pointer z-50"
           src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAYFBMVEX///8CAgIAAADb29vDw8OxsbHt7e3y8vK4uLiampo7OztmZmaAgIC8vLzT09NhYWEcHBxxcXHi4uITExOioqJXV1eHh4dMTEx7e3uQkJAnJyc1NTX5+fnW1tbJyclAQEBzZbpGAAABTUlEQVR4nO3cC1LCQAwG4LK8lYcioCLi/W9pGa9gkyH9vgt0/tmhGzbNdh0AAAAAAAAAAAAAAAAAAABEW0yHtkzNt9u/tKFdXg95AdeDx/uzygo4b20SobVdTsBlUMA+4ltOwmNUwH4RZykJT2EJJ+2ckvApMOFzSsL3wIQfKQk/AxPOUxJO496lLamw2YTth8ecgF23bwEZ+2dssgL2W+IloGb7Siva7q671XxY2+/MfAAAAAAPY3GbDeuW2wOe/QSctZ2Suod35xZzXpp2ILwOO/Pe5gQ8BPaArykJ14E94JxFjOwf5nQu9ID/M2HOGtb/HdZ/l9bfD0dQ04ygLu3q/7cAAAAAeBDlv9UvP29Rfmam/NxT/dm1+vOH9WdI6/eA689y15/Hr3+nQv17MUZwt8kI7qfp6t8xBAAAAAAAAAAAAAAAAAAAwDj9AgjsI6cJ8n2yAAAAAElFTkSuQmCC"
           alt="hamburger "
         />
@@ -74,7 +75,7 @@ getSearchSuggestions();
           <button className="px-5 py-2 m-1 rounded-r-full border-gray-400 bg-gray-400">🔍</button>
         </div>
         {showSuggestions && (
-          <div className="fixed border-gray-400 px-5 w-1/4 mx-1 rounded-2xl bg-gray-100">
+          <div className="z-40 fixed border-gray-400 px-5 w-1/4 mx-1 rounded-2xl bg-gray-100 ">
             <ul>
               {suggestions.map((suggestion, index) => (
                 <li
