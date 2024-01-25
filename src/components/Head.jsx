@@ -11,7 +11,6 @@ const Head = () => {
   const [suggestions, setSuggestions] = useState([]);
   const [showSuggestions, setShowSuggestions] = useState(false);
   const searchCache=useSelector((store)=>store.search);
-  console.log(process.env.YOUTUBE_API_KEY);
 
 
   useEffect(() => {

@@ -18,7 +18,7 @@ const SideBar = () => {
     <div className='relative'>
       {/* Overlay for fading effect */}
       <div
-        className={`fixed  left-10 w-full h-full bg-black ${overlayOpacity} transition-opacity ease-in-out duration-300 ${zIndex}`}
+        className={`fixed  left-10 w-full h-full bg-black ${overlayOpacity} transition-opacity  duration-300 ${zIndex}`}
       ></div>
 
       {/* Sidebar */}
