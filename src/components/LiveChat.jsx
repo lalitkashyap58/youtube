@@ -35,7 +35,7 @@ const LiveChat = () => {
                     <Message key={index} name={c.name} message={c.message} />
                 ))}
             </div>
-            <div className='w-full border h-[10%] -my-10'>
+            <div className='w-full border h-screen -my-10'>
                 <div className='flex'>
                     <input
                         type="text"
@@ -45,7 +45,7 @@ const LiveChat = () => {
                         onChange={(e) => setLiveChat(e.target.value)}
                     />
                     <button
-                        className='font-semibold p-2 w-1/4'
+                        className='font-semibold text-white p-2 w-1/4 bg-red-800'
                         onClick={handleSendMessage}
                     >
                         Submit✅

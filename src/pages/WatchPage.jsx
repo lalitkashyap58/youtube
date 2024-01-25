@@ -13,7 +13,7 @@ const WatchPage = () => {
     dispatch(closeMenu());
   });
   return (
-    <div className="flex flex-col w-full">
+    <div className="flex flex-col w-full h-[75%]">
       <div className="flex">
         <div className=" w-3/4 h-screen rounded-2xl">
           <iframe
