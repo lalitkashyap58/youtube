@@ -18,12 +18,12 @@ const SideBar = () => {
     <div className='relative'>
       {/* Overlay for fading effect */}
       <div
-        className={`fixed  left-10 w-full h-full bg-black ${overlayOpacity} transition-opacity  duration-300 ${zIndex}`}
+        className={`fixed  left-10 w-full h-full ${overlayOpacity} transition-opacity  bg-black ${zIndex}`}
       ></div>
 
       {/* Sidebar */}
       <div
-        className={`p-5 shadow-lg w-1/10 flex flex-col gap-3 bg-slate-300 transition-all ease-in-out duration-300 fixed z-50 h-full ${initialLeftPosition}`}
+        className={`p-5 shadow-lg w-1/10 flex flex-col gap-3  bg-slate-300 transition-all ease-in-out duration-300 fixed z-50 h-full ${initialLeftPosition}`}
       >
         <ul className='sticky'>
           <li>Home</li>
